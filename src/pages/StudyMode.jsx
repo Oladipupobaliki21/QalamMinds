@@ -1,27 +1,13 @@
-import React, { useState } from "react";
-import Flashcard from "../components/FlashCard";
+
+import { useLocation } from "react-router-dom";
+import Flashcard from "../components/Flashcard";
+import { useState } from "react";
 
 function StudyMode() {
-  const cards = [
-    {
-      id: 1,
-      arabic: "كتاب",
-      meaning: "Book",
-      pronunciation: "Kitab",
-    },
-    {
-      id: 2,
-      arabic: "قلم",
-      meaning: "Pen",
-      pronunciation: "Qalam",
-    },
-    {
-      id: 3,
-      arabic: "مدرسة",
-      meaning: "School",
-      pronunciation: "Madrasa",
-    },
-  ];
+  const location = useLocation();
+  const lesson = location.state?.lesson;
+
+  const cards = lesson?.cards || [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [known, setKnown] = useState([]);
@@ -43,26 +29,27 @@ function StudyMode() {
     if (currentIndex < cards.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      alert("🎉 You have completed this deck!");
+      alert("🎉 Lesson completed!");
     }
   };
+
+  if (!lesson) {
+    return <p className="text-white p-6">No lesson selected</p>;
+  }
 
   return (
     <div className="min-h-screen bg-slate-900 text-white p-6 flex flex-col items-center justify-center">
       
-     
+      <h2 className="mb-4 text-xl font-semibold">
+        {lesson.title}
+      </h2>
+
       <p className="mb-4 text-gray-400">
         Card {currentIndex + 1} of {cards.length}
       </p>
 
-      
-      <Flashcard
-        arabic={currentCard.arabic}
-        meaning={currentCard.meaning}
-        pronunciation={currentCard.pronunciation}
-      />
+      <Flashcard {...currentCard} />
 
-      {/* Buttons */}
       <div className="flex gap-4 mt-6">
         <button
           onClick={handleDontKnow}
@@ -79,7 +66,6 @@ function StudyMode() {
         </button>
       </div>
 
-      {/* Stats */}
       <div className="mt-6 text-sm text-gray-400">
         Known: {known.length} | Unknown: {unknown.length}
       </div>
