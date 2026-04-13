@@ -2,10 +2,14 @@
 import { useLocation } from "react-router-dom";
 import Flashcard from "../components/Flashcard";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function StudyMode() {
+
+  const navigate = useNavigate();
   const location = useLocation();
   const lesson = location.state?.lesson;
+
 
   const cards = lesson?.cards || [];
 
@@ -30,6 +34,7 @@ function StudyMode() {
       setCurrentIndex(currentIndex + 1);
     } else {
       alert("🎉 Lesson completed!");
+      navigate("/quiz", { state: { lesson } });
     }
   };
 

@@ -8,6 +8,8 @@ const levels = [
         cards: [
           { id: 1, arabic: "كتاب", meaning: "Book", pronunciation: "Kitab" },
           { id: 2, arabic: "قلم", meaning: "Pen", pronunciation: "Qalam" },
+          { id: 3, arabic: "مدرسة", meaning: "School", pronunciation: "Madrasa" },
+          { id: 4, arabic: "بيت", meaning: "House", pronunciation: "Bayt" },
         ],
       },
       {
