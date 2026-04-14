@@ -17,6 +17,9 @@ const levels = [
         title: "Lesson 2: Places",
         cards: [
           { id: 3, arabic: "مدرسة", meaning: "School", pronunciation: "Madrasa" },
+          { id: 5, arabic: "مستشفى", meaning: "Hospital", pronunciation: "Mustashfa" },
+          { id: 6, arabic: "سوق", meaning: "Market", pronunciation: "Souq" },
+          { id: 7, arabic: "مكتبة", meaning: "Library", pronunciation: "Maktaba" },
         ],
       },
     ],
