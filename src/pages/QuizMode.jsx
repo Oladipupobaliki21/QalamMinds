@@ -17,7 +17,6 @@ function QuizMode() {
 
   const currentCard = cards[currentIndex];
 
-  // ✅ FIX: Run unlock logic AFTER quiz ends
   useEffect(() => {
     if (showResult && lesson) {
       const percentage = Math.round((score / cards.length) * 100);
