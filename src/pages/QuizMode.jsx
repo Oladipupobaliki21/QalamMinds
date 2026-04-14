@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { updateProgress } from "../utils/progress";
 
 function QuizMode() {
   const location = useLocation();
@@ -57,6 +58,9 @@ function QuizMode() {
   // RESULT SCREEN
   if (showResult) {
     const percentage = Math.round((score / cards.length) * 100);
+    if (percentage >= 60) {
+  updateProgress(lesson.level);
+}
 
     return (
       <div className="min-h-screen bg-slate-900 text-white flex flex-col justify-center items-center">
