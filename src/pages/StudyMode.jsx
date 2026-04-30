@@ -1,6 +1,6 @@
 
 import { useLocation } from "react-router-dom";
-import Flashcard from "../components/Flashcard";
+import Flashcard from "../components/FlashCard";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

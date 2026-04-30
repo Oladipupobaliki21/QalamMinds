@@ -15,7 +15,7 @@ function DeckCard({ lesson, disabled }) {
       className={`p-4 rounded-2xl shadow-md transition ${
         disabled
           ? "bg-slate-700 opacity-50 cursor-not-allowed"
-          : "bg-slate-800 hover:scale-105 cursor-pointer"
+          : "bg-slate-800  cursor-pointer"
       }`}
     >
       <h3 className="text-lg font-semibold">{lesson.title}</h3>
