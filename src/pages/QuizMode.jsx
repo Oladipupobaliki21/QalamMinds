@@ -20,7 +20,7 @@ function QuizMode() {
   useEffect(() => {
     if (showResult && lesson) {
       const percentage = Math.round((score / cards.length) * 100);
-      const passed = percentage >= 60;
+      const passed = percentage >= 50;
 
       if (passed) {
         updateProgress(lesson.level);
@@ -81,7 +81,7 @@ function QuizMode() {
   // RESULT SCREEN
   if (showResult) {
     const percentage = Math.round((score / cards.length) * 100);
-    const passed = percentage >= 60;
+    const passed = percentage >= 50;
 
     return (
       <div className="min-h-screen bg-slate-900 text-white flex flex-col justify-center items-center text-center p-6">
