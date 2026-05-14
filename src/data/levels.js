@@ -24,8 +24,20 @@ const levels = [
           { id: 7, arabic: "مكتبة", meaning: "Library", pronunciation: "Maktaba" },
         ],
       },
+      {
+        id: "lesson3",
+        title: "Lesson 3: Food",
+        level: "Beginner",
+        cards: [
+          { id: 8, arabic: "ماء", meaning: "Water", pronunciation: "Ma'" },
+          { id: 9, arabic: "خبز", meaning: "Bread", pronunciation: "Khubz" },
+          { id: 10, arabic: "فاكهة", meaning: "Fruit", pronunciation: "Fakihah" },
+          { id: 11, arabic: "خضار", meaning: "Vegetable", pronunciation: "Khodar" },
+        ],
+      }
     ],
   },
+    
   {
     level: "Intermediate",
     lessons: [
@@ -35,6 +47,10 @@ const levels = [
         level: "Intermediate",
         cards: [
           { id: 4, arabic: "جامعة", meaning: "University", pronunciation: "Jami'ah" },
+          { id: 8, arabic: "مطار", meaning: "Airport", pronunciation: "Matar" },
+          { id: 9, arabic: "مطعم", meaning: "Restaurant", pronunciation: "Mat'am" },
+          { id: 10, arabic: "فندق", meaning: "Hotel", pronunciation: "Funduq" },
+          { id: 11, arabic: "حديقة", meaning: "Park", pronunciation: "Hadiqa" },
         ],
       },
     ],
